@@ -1,32 +1,93 @@
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556487666124068...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/#1556487673592270...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/model.ckpt-0.index#1556487674408826...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/events.out.tfevents.1556487666.infer2#1556487667026803...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/graph.pbtxt#1556487670887713...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/model.ckpt-0.data-00000-of-00001#1556487674230228...
-/ [1/6 objects]  16% Done                                                       / [2/6 objects]  33% Done                                                       / [3/6 objects]  50% Done                                                       / [4/6 objects]  66% Done                                                       / [5/6 objects]  83% Done                                                       / [6/6 objects] 100% Done                                                       
-Operation completed over 6 objects.                                              
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f4a7c4ee6a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:51:38.433279: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+weight_decay 0.01, learning_rate 5.0
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556490017029549...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/events.out.tfevents.1556490017.infer2#1556490100463391...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/checkpoint#1556490099349974...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/#1556490097858032...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/graph.pbtxt#1556490021258401...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/eval/#1556490123264873...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-0.index#1556490024604046...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-0.data-00000-of-00001#1556490024398698...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-0.meta#1556490025936161...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/eval/events.out.tfevents.1556490123.infer2#1556490124526675...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-2910.data-00000-of-00001#1556490098429077...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-2910.index#1556490098655256...
+/ [1 objects]                                                                   / [2 objects]                                                                   / [3 objects]                                                                   / [4 objects]                                                                   Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:20:13/model.ckpt-2910.meta#1556490100119107...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/#1556767555706346...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/checkpoint#1556767559887343...
+/ [5 objects]                                                                   / [6 objects]                                                                   / [7 objects]                                                                   / [8 objects]                                                                   / [9 objects]                                                                   Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/eval/#1556767589961880...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/eval/events.out.tfevents.1556767590.0d574e82984f#1556767593822817...
+/ [10 objects]                                                                  / [11 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/graph.pbtxt#1556767465875425...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/events.out.tfevents.1556767459.0d574e82984f#1556767563997404...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-0.data-00000-of-00001#1556767473743983...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-0.index#1556767474424333...
+/ [12 objects]                                                                  / [13 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-2910.data-00000-of-00001#1556767557322847...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-0.meta#1556767478764181...
+/ [14 objects]                                                                  / [15 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-2910.index#1556767558054070...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:24:13/model.ckpt-2910.meta#1556767562659407...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/#1556768089615525...
+/ [16 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/checkpoint#1556768093897137...
+/ [17 objects]                                                                  / [18 objects]                                                                  / [19 objects]                                                                  / [20 objects]                                                                  / [21 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/eval/#1556768123869100...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/eval/events.out.tfevents.1556768124.0d574e82984f#1556768127730680...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/events.out.tfevents.1556767993.0d574e82984f#1556768097245670...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/graph.pbtxt#1556768001514697...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-0.data-00000-of-00001#1556768009454660...
+/ [22 objects]                                                                  / [23 objects]                                                                  / [24 objects]                                                                  / [25 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-0.index#1556768010165458...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-2910.data-00000-of-00001#1556768091267993...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-0.meta#1556768014470501...
+/ [26 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-2910.index#1556768092032962...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:33:09/model.ckpt-2910.meta#1556768096361836...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/#1556768364587571...
+/ [27 objects]                                                                  / [28 objects]                                                                  / [29 objects]                                                                  / [30 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/checkpoint#1556768368824291...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/eval/#1556768399334725...
+/ [31 objects]                                                                  / [32 objects]                                                                  / [33 objects]                                                                  / [34 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/graph.pbtxt#1556768276389966...
+/ [35 objects]                                                                  Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/eval/events.out.tfevents.1556768399.0d574e82984f#1556768403265421...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-0.data-00000-of-00001#1556768284483986...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/events.out.tfevents.1556768269.0d574e82984f#1556768372454679...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-0.index#1556768285195177...
+/ [36/85 objects]  42% Done                                                     / [37/85 objects]  43% Done                                                     / [38/85 objects]  44% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-0.meta#1556768289420352...
+/ [39/85 objects]  45% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-2910.data-00000-of-00001#1556768366188856...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-2910.index#1556768366902512...
+/ [40/85 objects]  47% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:37:44/model.ckpt-2910.meta#1556768371118298...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/#1556768567104518...
+/ [41/85 objects]  48% Done                                                     / [42/85 objects]  49% Done                                                     / [43/85 objects]  50% Done                                                     / [44/85 objects]  51% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/checkpoint#1556768571395425...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/eval/events.out.tfevents.1556768602.0d574e82984f#1556768606087968...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/events.out.tfevents.1556768468.0d574e82984f#1556768575125987...
+/ [45/85 objects]  52% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/eval/#1556768602020014...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/graph.pbtxt#1556768476219803...
+/ [46/85 objects]  54% Done                                                     / [47/85 objects]  55% Done                                                     / [48/85 objects]  56% Done                                                     / [49/85 objects]  57% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-0.data-00000-of-00001#1556768484400065...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-0.index#1556768485132570...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-2910.data-00000-of-00001#1556768568821093...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-0.meta#1556768489233179...
+/ [50/85 objects]  58% Done                                                     / [51/85 objects]  60% Done                                                     / [52/85 objects]  61% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-2910.index#1556768569530246...
+/ [53/85 objects]  62% Done                                                     / [54/85 objects]  63% Done                                                     / [55/85 objects]  64% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:41:04/model.ckpt-2910.meta#1556768573834685...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/checkpoint#1556768726631627...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/eval/#1556768756420589...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/#1556768722456578...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/eval/events.out.tfevents.1556768756.0d574e82984f#1556768760392429...
+/ [56/85 objects]  65% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/events.out.tfevents.1556768623.0d574e82984f#1556768730397074...
+/ [57/85 objects]  67% Done                                                     / [58/85 objects]  68% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/graph.pbtxt#1556768630667995...
+/ [59/85 objects]  69% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-0.data-00000-of-00001#1556768638577226...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-0.index#1556768639226681...
+/ [60/85 objects]  70% Done                                                     / [61/85 objects]  71% Done                                                     / [62/85 objects]  72% Done                                                     / [63/85 objects]  74% Done                                                     / [64/85 objects]  75% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-0.meta#1556768643680658...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-2910.data-00000-of-00001#1556768724147301...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-2910.index#1556768724849881...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/#1556768917120343...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:43:39/model.ckpt-2910.meta#1556768729057908...
+/ [65/85 objects]  76% Done                                                     / [66/85 objects]  77% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/checkpoint#1556768921384341...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/eval/#1556768951616720...
+/ [67/85 objects]  78% Done                                                     / [68/85 objects]  80% Done                                                     / [69/85 objects]  81% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/eval/events.out.tfevents.1556768951.0d574e82984f#1556768955737048...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/graph.pbtxt#1556768823640922...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/events.out.tfevents.1556768815.0d574e82984f#1556768925089793...
+/ [70/85 objects]  82% Done                                                     / [71/85 objects]  83% Done                                                     / [72/85 objects]  84% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-0.data-00000-of-00001#1556768831796265...
+/ [73/85 objects]  85% Done                                                     / [74/85 objects]  87% Done                                                     / [75/85 objects]  88% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-0.index#1556768832522375...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-0.meta#1556768836656352...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-2910.data-00000-of-00001#1556768918782632...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-2910.index#1556768919429734...
+/ [76/85 objects]  89% Done                                                     Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-03:46:51/model.ckpt-2910.meta#1556768923695870...
+/ [77/85 objects]  90% Done                                                     / [78/85 objects]  91% Done                                                     / [79/85 objects]  92% Done                                                     / [80/85 objects]  94% Done                                                     / [81/85 objects]  95% Done                                                     / [82/85 objects]  96% Done                                                     / [83/85 objects]  97% Done                                                     / [84/85 objects]  98% Done                                                     / [85/85 objects] 100% Done                                                     
+Operation completed over 85 objects.                                             
+WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f5208615c80>) includes params argument, but params are not passed to Estimator.
+2019-05-02 07:56:01.843781: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
 WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
@@ -39,279 +100,3 @@ Deprecated in favor of operator or tf.math.divide.
 WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2019-04-28 21:51:51.485871: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'loss': 366.84714, 'accuracy': 0.927, 'global_step': 2910}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/events.out.tfevents.1556488301.infer2#1556488379172474...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/graph.pbtxt#1556488306034940...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.data-00000-of-00001#1556488309226309...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488301330107...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/checkpoint#1556488378051587...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/#1556488376717150...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/eval/events.out.tfevents.1556488398.infer2#1556488399905901...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/eval/#1556488398547697...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.index#1556488309403661...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.meta#1556488310693130...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.data-00000-of-00001#1556488377368021...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.meta#1556488378828952...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.index#1556488377577872...
-/ [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f1124b416a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:53:23.772773: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 21:53:36.786166: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'accuracy': 0.9294, 'loss': 340.6521}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488406635308...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/events.out.tfevents.1556488406.infer2#1556488490176876...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/#1556488487719691...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/graph.pbtxt#1556488411240183...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/checkpoint#1556488489121211...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.index#1556488414705932...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/eval/#1556488512298211...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/eval/events.out.tfevents.1556488512.infer2#1556488513539425...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.data-00000-of-00001#1556488414463659...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.meta#1556488415997695...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.data-00000-of-00001#1556488488319942...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.index#1556488488531654...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.meta#1556488489808973...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f8a555316a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:55:17.372365: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 21:55:30.369098: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9299, 'loss': 372.68155, 'global_step': 2910}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488520250390...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/#1556488603021315...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/events.out.tfevents.1556488520.infer2#1556488605456926...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/checkpoint#1556488604343655...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/eval/#1556488627501012...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.data-00000-of-00001#1556488528033038...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.index#1556488528266015...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/graph.pbtxt#1556488524966626...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.meta#1556488529612968...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/eval/events.out.tfevents.1556488627.infer2#1556488628709568...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.data-00000-of-00001#1556488603651008...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.index#1556488603824706...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.meta#1556488605110335...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f6336d316a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:16:38.403915: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:16:50.729320: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9309, 'global_step': 2910, 'loss': 413.5775}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556489801017350...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/#1556489874641921...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/events.out.tfevents.1556489801.infer2#1556489877199672...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/checkpoint#1556489876043147...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/eval/#1556489895798488...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/eval/events.out.tfevents.1556489895.infer2#1556489897171641...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.index#1556489808812834...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/graph.pbtxt#1556489805195121...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.data-00000-of-00001#1556489808595769...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.meta#1556489810058746...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.data-00000-of-00001#1556489875247165...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.index#1556489875498711...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.meta#1556489876830363...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fac8f0ac6a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:18:21.185098: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:18:33.670461: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'accuracy': 0.9283, 'loss': 461.05905}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556489903782669...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/graph.pbtxt#1556489907895582...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/checkpoint#1556489985836273...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/#1556489984515376...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/events.out.tfevents.1556489904.infer2#1556489986859144...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/eval/events.out.tfevents.1556490009.infer2#1556490010339265...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/eval/#1556490009118421...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.data-00000-of-00001#1556489911400007...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.index#1556489911618530...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.meta#1556489912967366...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.data-00000-of-00001#1556489985143557...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.index#1556489985330517...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.meta#1556489986524294...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f312a0756a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:20:14.306164: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:20:26.599723: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9289, 'loss': 428.51166, 'global_step': 2910}
-
