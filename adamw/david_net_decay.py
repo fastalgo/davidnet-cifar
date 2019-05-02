@@ -14,6 +14,7 @@ from tensorflow.python.ops import linalg_ops
 from tensorflow.python.ops import math_ops
 from absl import flags
 #from official.utils.flags import core as flags_core
+from weight_decay_optimizers import AdamWOptimizer
 
 
 def create_optimizer(loss, init_lr, num_train_steps, num_warmup_steps, use_tpu,
@@ -149,12 +150,14 @@ class LAMBOptimizer(tf.train.Optimizer):
       # Instead we want ot decay the weights in a manner that doesn't interact
       # with the m/v parameters. This is equivalent to adding the square
       # of the weights to the loss with plain (non-momentum) SGD.
-      ratio = 1.0
       if self._do_use_weight_decay(param_name):
         update += self.weight_decay_rate * param
-        w_norm = linalg_ops.norm(param, ord=2)
-        g_norm = linalg_ops.norm(update, ord=2)
-        ratio = array_ops.where(math_ops.greater(w_norm, 0), array_ops.where(math_ops.greater(g_norm, 0), (w_norm / g_norm), 1.0), 1.0)
+
+      w_norm = linalg_ops.norm(param, ord=2)
+      # g_norm = linalg_ops.norm(grad, ord=2)
+      g_norm = linalg_ops.norm(update, ord=2)
+      ratio = array_ops.where(math_ops.greater(w_norm, 0), array_ops.where(
+          math_ops.greater(g_norm, 0), (w_norm / g_norm), 1.0), 1.0)
 
       # update_with_lr = self.learning_rate * update
       # condition = tf.greater(ratio, 1.0)
@@ -192,9 +195,9 @@ BATCH_SIZE = 512 #@param {type:"integer"}
 MOMENTUM = 0.9 #@param {type:"number"}
 EPOCHS = 30 #@param {type:"integer"}
 BUCKET = 'gs://bert-pretrain-data/cifar' #@param {type:"string"}
-#TPU_ADDRESS = 'infer1'
+TPU_ADDRESS = 'infer1'
 
-tf.flags.DEFINE_float("learning_rate", 0.006, "Learning rate.")
+tf.flags.DEFINE_float("learning_rate", 0.001, "Learning rate.")
 tf.flags.DEFINE_float("poly_power", 0.5, "The power of poly decay scheme.")
 
 tf.flags.DEFINE_bool("use_tpu", True, "Use TPUs rather than plain CPUs")
@@ -202,22 +205,22 @@ tf.flags.DEFINE_integer("iterations", 50,
                                 "Number of iterations per TPU training loop.")
 tf.flags.DEFINE_integer("num_shards", 8, "Number of shards (TPU chips).")
 tf.flags.DEFINE_integer("batch_size", 512, "***")
-tf.flags.DEFINE_float("weight_decay", 0.01, "***")
-tf.flags.DEFINE_integer("warm_up", 3, "***")
-tf.flags.DEFINE_string("tpu_name", "infer2", "***")
+tf.flags.DEFINE_float("weight_decay", 0.0001, "***")
+tf.flags.DEFINE_integer("warm_up", 5, "***")
+tf.flags.DEFINE_string("tpu_name", default=None, help="The Cloud TPU name.")
 
 FLAGS = tf.flags.FLAGS
 
-TPU_ADDRESS = FLAGS.tpu_name
 LEARNING_RATE = FLAGS.learning_rate
 WARMUP = FLAGS.warm_up
 WEIGHT_DECAY = FLAGS.weight_decay
+TPU_ADDRESS = FLAGS.tpu_name
 
 
 print('Using TPU:', TPU_ADDRESS)
-print('learning rate:', LEARNING_RATE)
+print('learning_rate:', LEARNING_RATE)
 print('warmup:', WARMUP)
-print('weight decay:', WEIGHT_DECAY)
+print('weight_decay:', WEIGHT_DECAY)
 
 def get_ds_from_tfrec(data_dir, training, batch_size, num_parallel_calls=12, prefetch=8, dtype=tf.float32):
 
@@ -326,22 +329,20 @@ def model_fn(features, labels, mode, params):
   model = DavidNet()
   logits = model(features)
   
-  #step = tf.train.get_or_create_global_step()
-  #lr_schedule = lambda t: tf.cond(tf.less_equal(t, WARMUP), lambda: t * LEARNING_RATE / WARMUP, lambda: (EPOCHS-t) * LEARNING_RATE / (EPOCHS - WARMUP))
-  #lr_func = lambda: lr_schedule(tf.cast(step, tf.float32)/steps_per_epoch)/BATCH_SIZE
+  step = tf.train.get_or_create_global_step()
+  lr_schedule = lambda t: tf.cond(tf.less_equal(t, WARMUP), lambda: t * LEARNING_RATE / WARMUP, lambda: (EPOCHS-t) * LEARNING_RATE / (EPOCHS - WARMUP))
+  lr_func = lambda: lr_schedule(tf.cast(step, tf.float32)/steps_per_epoch)/BATCH_SIZE
 
   #opt = tf.train.MomentumOptimizer(lr_func, momentum=MOMENTUM, use_nesterov=True)
-  #opt = tf.contrib.tpu.CrossShardOptimizer(opt, reduction=tf.losses.Reduction.SUM)
-  num_warmup_steps = WARMUP * 50000 // BATCH_SIZE
-  num_train_steps = EPOCHS * 50000 // BATCH_SIZE
+  #opt = AdamWOptimizer(weight_decay=FLAGS.weight_decay, learning_rate=FLAGS.learning_rate)
+  opt = AdamWOptimizer(weight_decay=FLAGS.weight_decay, learning_rate=lr_func)
+  opt = tf.contrib.tpu.CrossShardOptimizer(opt, reduction=tf.losses.Reduction.SUM)
 
   loss = tf.losses.sparse_softmax_cross_entropy(labels, logits, reduction=tf.losses.Reduction.SUM)
 
-  #grads = model.compute_grads(loss)
+  grads = model.compute_grads(loss)
   with tf.control_dependencies(model.get_updates_for(features)):
-    #train_op = opt.apply_gradients(zip(grads, model.trainable_variables), global_step=step)
-    train_op = create_optimizer(loss, LEARNING_RATE, num_train_steps, num_warmup_steps, True,
-                     1.0, 0, WEIGHT_DECAY)
+    train_op = opt.apply_gradients(zip(grads, model.trainable_variables), global_step=step)
 
   classes = tf.math.argmax(logits, axis=-1)
   metric_fn = lambda classes, labels: {'accuracy': tf.metrics.accuracy(classes, labels)}
@@ -355,7 +356,7 @@ def model_fn(features, labels, mode, params):
   )
 
 now = datetime.datetime.now()
-MODEL_DIR = BUCKET+"/cifar10jobs/job" + "-{}-{:02d}-{:02d}-{:02d}:{:02d}:{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
+MODEL_DIR = BUCKET+"/jobs_adam/job" + "-{}-{:02d}-{:02d}-{:02d}:{:02d}:{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
 
 training_config = tf.contrib.tpu.RunConfig(
     cluster=tf.contrib.cluster_resolver.TPUClusterResolver(TPU_ADDRESS),
