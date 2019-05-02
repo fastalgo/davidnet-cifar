@@ -193,7 +193,37 @@ class LAMBOptimizer(tf.train.Optimizer):
 #  tf.gfile.DeleteRecursively('./fenwicks')
 #!git clone https://github.com/fenwickslab/fenwicks.git
 #from fenwicks.utils.colab import TPU_ADDRESS
-TPU_ADDRESS = 'infer2'
+BATCH_SIZE = 512 #@param ["512", "256", "128"] {type:"raw"}
+MOMENTUM = 0.9 #@param ["0.9", "0.95", "0.975"] {type:"raw"}
+#WEIGHT_DECAY = 0.000125 #@param ["0.000125", "0.00025", "0.0005"] {type:"raw"}
+WEIGHT_DECAY = 0.01
+WEIGHT_DECAY = 0.064
+#LEARNING_RATE = 0.4 #@param ["0.4", "0.2", "0.1"] {type:"raw"}
+LEARNING_RATE = 12.00 #@param ["0.4", "0.2", "0.1"] {type:"raw"}
+EPOCHS = 24 #@param {type:"slider", min:0, max:100, step:1}
+WARMUP = 5 #@param {type:"slider", min:0, max:24, step:1}
+BUCKET = 'gs://bert-pretrain-data'
+PROJECT = 'cifar'
+
+tf.flags.DEFINE_float("learning_rate", 10.0, "Learning rate.")
+tf.flags.DEFINE_float("poly_power", 0.5, "The power of poly decay scheme.")
+
+tf.flags.DEFINE_bool("use_tpu", True, "Use TPUs rather than plain CPUs")
+tf.flags.DEFINE_integer("iterations", 50,
+                                        "Number of iterations per TPU training loop.")
+tf.flags.DEFINE_integer("num_shards", 8, "Number of shards (TPU chips).")
+tf.flags.DEFINE_integer("batch_size", 512, "***")
+tf.flags.DEFINE_float("weight_decay", 0.01, "***")
+tf.flags.DEFINE_integer("warm_up", 5, "***")
+tf.flags.DEFINE_string("tpu_name", "infer2", "***")
+
+FLAGS = tf.flags.FLAGS
+
+LEARNING_RATE = FLAGS.learning_rate
+WARMUP = FLAGS.warm_up
+WEIGHT_DECAY = FLAGS.weight_decay
+TPU_ADDRESS = FLAGS.tpu_name
+#TPU_ADDRESS = 'infer2'
 
 
 def exp_decay_lr(init_lr: float, decay_steps: int, base_lr: float = 0, decay_rate: float = 1 / math.e):
@@ -451,38 +481,6 @@ def get_clf_model_func(model_arch, opt_func, reduction=tf.losses.Reduction.MEAN)
 
     return model_func
 
-
-
-BATCH_SIZE = 512 #@param ["512", "256", "128"] {type:"raw"}
-MOMENTUM = 0.9 #@param ["0.9", "0.95", "0.975"] {type:"raw"}
-#WEIGHT_DECAY = 0.000125 #@param ["0.000125", "0.00025", "0.0005"] {type:"raw"}
-WEIGHT_DECAY = 0.01
-WEIGHT_DECAY = 0.064
-#LEARNING_RATE = 0.4 #@param ["0.4", "0.2", "0.1"] {type:"raw"}
-LEARNING_RATE = 12.00 #@param ["0.4", "0.2", "0.1"] {type:"raw"}
-EPOCHS = 24 #@param {type:"slider", min:0, max:100, step:1}
-WARMUP = 5 #@param {type:"slider", min:0, max:24, step:1}
-BUCKET = 'gs://bert-pretrain-data'
-PROJECT = 'cifar'
-
-tf.flags.DEFINE_float("learning_rate", 10.0, "Learning rate.")
-tf.flags.DEFINE_float("poly_power", 0.5, "The power of poly decay scheme.")
-
-tf.flags.DEFINE_bool("use_tpu", True, "Use TPUs rather than plain CPUs")
-tf.flags.DEFINE_integer("iterations", 50,
-                                        "Number of iterations per TPU training loop.")
-tf.flags.DEFINE_integer("num_shards", 8, "Number of shards (TPU chips).")
-tf.flags.DEFINE_integer("batch_size", 512, "***")
-tf.flags.DEFINE_float("weight_decay", 0.01, "***")
-tf.flags.DEFINE_integer("warm_up", 5, "***")
-
-FLAGS = tf.flags.FLAGS
-
-LEARNING_RATE = FLAGS.learning_rate
-WARMUP = FLAGS.warm_up
-WEIGHT_DECAY = FLAGS.weight_decay
-
-#fw.colab_utils.setup_gcs()
 
 data_dir, work_dir = fw.io.get_gcs_dirs(BUCKET, PROJECT)
 

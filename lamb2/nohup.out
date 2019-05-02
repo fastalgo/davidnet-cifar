@@ -100,3 +100,1190 @@ Deprecated in favor of operator or tf.math.divide.
 WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
+2019-05-02 07:56:14.577748: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:Reraising captured error
+Using TPU: infer2
+learning rate: 5.0
+warmup: 5
+weight decay: 0.01
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+*********** I have started the training ***********
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[{{node CheckNumerics_8}}]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "david_net.py", line 375, in <module>
+    estimator.train(train_input_fn, steps=steps_per_epoch*EPOCHS)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model_default
+    saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1407, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 676, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1171, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1270, in run
+    raise six.reraise(*original_exc_info)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1255, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1327, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1091, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+Caused by op 'CheckNumerics_8', defined at:
+  File "david_net.py", line 375, in <module>
+    estimator.train(train_input_fn, steps=steps_per_epoch*EPOCHS)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1154, in _train_model_default
+    features, labels, model_fn_lib.ModeKeys.TRAIN, self.config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2633, in _model_fn
+    update_ops = _sync_variables_ops(ctx)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in _sync_variables_ops
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in <listcomp>
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/gen_array_ops.py", line 919, in check_numerics
+    "CheckNumerics", tensor=tensor, message=message, name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+InvalidArgumentError (see above for traceback): Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+weight_decay 0.01, learning_rate 6.0
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556783764798736...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/#1556783771795457...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/checkpoint#1556783773057319...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/model.ckpt-0.data-00000-of-00001#1556783772366089...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/graph.pbtxt#1556783769118178...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/events.out.tfevents.1556783765.infer2#1556783765557639...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/model.ckpt-0.index#1556783772574322...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:00/model.ckpt-0.meta#1556783773898087...
+/ [1/8 objects]  12% Done                                                       / [2/8 objects]  25% Done                                                       / [3/8 objects]  37% Done                                                       / [4/8 objects]  50% Done                                                       / [5/8 objects]  62% Done                                                       / [6/8 objects]  75% Done                                                       / [7/8 objects]  87% Done                                                       / [8/8 objects] 100% Done                                                       
+Operation completed over 8 objects.                                              
+WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fabc656dc80>) includes params argument, but params are not passed to Estimator.
+2019-05-02 07:56:39.039772: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-02 07:56:52.065307: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:Reraising captured error
+Using TPU: infer2
+learning rate: 6.0
+warmup: 5
+weight decay: 0.01
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+*********** I have started the training ***********
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[{{node CheckNumerics_8}}]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "david_net.py", line 375, in <module>
+    estimator.train(train_input_fn, steps=steps_per_epoch*EPOCHS)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model_default
+    saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1407, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 676, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1171, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1270, in run
+    raise six.reraise(*original_exc_info)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1255, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1327, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1091, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+Caused by op 'CheckNumerics_8', defined at:
+  File "david_net.py", line 375, in <module>
+    estimator.train(train_input_fn, steps=steps_per_epoch*EPOCHS)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1154, in _train_model_default
+    features, labels, model_fn_lib.ModeKeys.TRAIN, self.config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2633, in _model_fn
+    update_ops = _sync_variables_ops(ctx)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in _sync_variables_ops
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in <listcomp>
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/gen_array_ops.py", line 919, in check_numerics
+    "CheckNumerics", tensor=tensor, message=message, name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+InvalidArgumentError (see above for traceback): Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+weight_decay 0.01, learning_rate 7.0
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556783801975648...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/model.ckpt-0.index#1556783809875320...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/model.ckpt-0.data-00000-of-00001#1556783809575118...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/checkpoint#1556783810693058...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/#1556783808919639...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/model.ckpt-0.meta#1556783811402925...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/events.out.tfevents.1556783802.infer2#1556783802739338...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:56:37/graph.pbtxt#1556783806312553...
+/ [1/8 objects]  12% Done                                                       / [2/8 objects]  25% Done                                                       / [3/8 objects]  37% Done                                                       / [4/8 objects]  50% Done                                                       / [5/8 objects]  62% Done                                                       / [6/8 objects]  75% Done                                                       / [7/8 objects]  87% Done                                                       / [8/8 objects] 100% Done                                                       
+Operation completed over 8 objects.                                              
+WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fc4dfe83c80>) includes params argument, but params are not passed to Estimator.
+2019-05-02 07:57:14.874388: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-02 07:57:27.732271: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:Reraising captured error
+Using TPU: infer2
+learning rate: 7.0
+warmup: 5
+weight decay: 0.01
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+*********** I have started the training ***********
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[{{node CheckNumerics_8}}]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "david_net.py", line 375, in <module>
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model_default
+    saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1407, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 676, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1171, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1270, in run
+    raise six.reraise(*original_exc_info)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1255, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1327, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1091, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+Caused by op 'CheckNumerics_8', defined at:
+  File "david_net.py", line 375, in <module>
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1154, in _train_model_default
+    features, labels, model_fn_lib.ModeKeys.TRAIN, self.config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2633, in _model_fn
+    update_ops = _sync_variables_ops(ctx)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in _sync_variables_ops
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 207, in <listcomp>
+    for v in variables.trainable_variables()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/gen_array_ops.py", line 919, in check_numerics
+    "CheckNumerics", tensor=tensor, message=message, name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+InvalidArgumentError (see above for traceback): Gradient for david_net/res_blk/conv_bn_2/batch_normalization_v1_2/beta:0 is NaN : Tensor had NaN values
+	 [[node CheckNumerics_8 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+weight_decay 0.01, learning_rate 8.0
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/model.ckpt-0.data-00000-of-00001#1556783845624730...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/#1556783845031184...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556783837591391...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/checkpoint#1556783846334344...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/events.out.tfevents.1556783837.infer2#1556783838281317...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/model.ckpt-0.index#1556783845819549...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/graph.pbtxt#1556783841902448...
+Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-05-02-07:57:13/model.ckpt-0.meta#1556783847040914...
+/ [1/8 objects]  12% Done                                                       / [2/8 objects]  25% Done                                                       / [3/8 objects]  37% Done                                                       / [4/8 objects]  50% Done                                                       / [5/8 objects]  62% Done                                                       / [6/8 objects]  75% Done                                                       / [7/8 objects]  87% Done                                                       / [8/8 objects] 100% Done                                                       
+Operation completed over 8 objects.                                              
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 9.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 10.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 11.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 12.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 13.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 14.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 15.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 16.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 17.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 18.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 19.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.01, learning_rate 20.0
+CommandException: 1 files/objects could not be removed.
+python3: can't open file 'david_net.py': [Errno 2] No such file or directory
+weight_decay 0.02, learning_rate 5.0
+weight_decay 0.01, learning_rate 5.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 481, in <module>
+    LEARNING_RATE = FLAGS.learning_rate
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/platform/flags.py", line 84, in __getattr__
+    wrapped(_sys.argv)
+  File "/usr/local/lib/python3.5/dist-packages/absl/flags/_flagvalues.py", line 633, in __call__
+    name, value, suggestions=suggestions)
+absl.flags._exceptions.UnrecognizedFlagError: Unknown command line flag 'tpu_name'
+weight_decay 0.01, learning_rate 6.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 481, in <module>
+    LEARNING_RATE = FLAGS.learning_rate
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/platform/flags.py", line 84, in __getattr__
+    wrapped(_sys.argv)
+  File "/usr/local/lib/python3.5/dist-packages/absl/flags/_flagvalues.py", line 633, in __call__
+    name, value, suggestions=suggestions)
+absl.flags._exceptions.UnrecognizedFlagError: Unknown command line flag 'tpu_name'
+weight_decay 0.01, learning_rate 7.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 481, in <module>
+    LEARNING_RATE = FLAGS.learning_rate
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/platform/flags.py", line 84, in __getattr__
+    wrapped(_sys.argv)
+  File "/usr/local/lib/python3.5/dist-packages/absl/flags/_flagvalues.py", line 633, in __call__
+    name, value, suggestions=suggestions)
+absl.flags._exceptions.UnrecognizedFlagError: Unknown command line flag 'tpu_name'
+weight_decay 0.01, learning_rate 8.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 481, in <module>
+    LEARNING_RATE = FLAGS.learning_rate
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/platform/flags.py", line 84, in __getattr__
+    wrapped(_sys.argv)
+  File "/usr/local/lib/python3.5/dist-packages/absl/flags/_flagvalues.py", line 633, in __call__
+    name, value, suggestions=suggestions)
+absl.flags._exceptions.UnrecognizedFlagError: Unknown command line flag 'tpu_name'
+weight_decay 0.01, learning_rate 9.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 481, in <module>
+    LEARNING_RATE = FLAGS.learning_rate
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/platform/flags.py", line 84, in __getattr__
+    wrapped(_sys.argv)
+  File "/usr/local/lib/python3.5/dist-packages/absl/flags/_flagvalues.py", line 633, in __call__
+    name, value, suggestions=suggestions)
+absl.flags._exceptions.UnrecognizedFlagError: Unknown command line flag 'tpu_name'
+weight_decay 0.01, learning_rate 10.0
+CommandException: 1 files/objects could not be removed.
+weight_decay 0.01, learning_rate 5.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 6.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 7.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 8.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 9.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 10.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 11.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 12.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 13.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 14.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 15.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 16.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 17.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 18.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 19.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.01, learning_rate 20.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 5.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 6.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 7.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 8.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 9.0
+CommandException: 1 files/objects could not be removed.
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 197, in <module>
+    TPU_ADDRESS = FLAGS.tpu_name
+NameError: name 'FLAGS' is not defined
+weight_decay 0.02, learning_rate 10.0
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7ff03261eae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:02:29.034754: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-02 08:02:41.633144: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+
+Evaluation results:
+	{'accuracy': 0.932375, 'loss': 171.75998, 'global_step': 2328}
+
+weight_decay 0.02, learning_rate 11.0
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f747c4e1ae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:03:53.442238: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-02 08:04:06.414340: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+weight_decay 0.01, learning_rate 5.0
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f68975c2ae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:04:53.613960: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1070: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2019-05-02 08:05:15.460563: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:Reraising captured error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.NotFoundError: Combined status information from 9 operations:
+
+Status code: Not found [9x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[{{node TPUReplicateMetadata}}]] [8x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[{{node TPUReplicateMetadata}}]]
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+(0 successful operations.)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 543, in <module>
+    print('\nEvaluation results:\n\t%s\n' % result)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2478, in evaluate
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2473, in evaluate
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 469, in evaluate
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 511, in _actual_eval
+    return _evaluate()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 500, in _evaluate
+    output_dir=self.eval_dir(name))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1537, in _evaluate_run
+    config=self._session_config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/evaluation.py", line 274, in _evaluate_once
+    session.run(eval_ops, feed_dict)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 676, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1171, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1270, in run
+    raise six.reraise(*original_exc_info)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1255, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1327, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1091, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.NotFoundError: Combined status information from 9 operations:
+
+Status code: Not found [9x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [8x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+(0 successful operations.)
+
+Caused by op 'TPUReplicateMetadata', defined at:
+  File "lamb_davidnet_cifar10.py", line 543, in <module>
+    print('\nEvaluation results:\n\t%s\n' % result)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2473, in evaluate
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 469, in evaluate
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 511, in _actual_eval
+    return _evaluate()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 493, in _evaluate
+    self._evaluate_build_graph(input_fn, hooks, checkpoint_path))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1424, in _evaluate_build_graph
+    self._call_model_fn_eval(input_fn, self.config))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1460, in _call_model_fn_eval
+    features, labels, model_fn_lib.ModeKeys.EVAL, config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2651, in _model_fn
+    _eval_on_tpu_system(ctx, model_fn_wrapper, dequeue_fn))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2869, in _eval_on_tpu_system
+    device_assignment=ctx.device_assignment)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu.py", line 890, in split_compile_and_shard
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu.py", line 636, in split_compile_and_replicate
+    num_replicas=num_replicas, use_tpu=use_tpu, **metadata_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/ops/gen_tpu_ops.py", line 7366, in tpu_replicate_metadata
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+NotFoundError (see above for traceback): Combined status information from 9 operations:
+
+Status code: Not found [9x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [8x]
+  No proto found for key cluster_10720776710058795900_f15n_0:5545322069591935091:8:2,2,1,0,0,0,0:::0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+(0 successful operations.)
+
+weight_decay 0.02, learning_rate 12.0
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Reraising captured error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Unable to enqueue when not opened, queue: [0000:00:04.0 PE0 C0 MC0 TN0 Queue TENSOR_CORE_INFEED]. State is: CLOSED
+	 [[{{node input_pipeline_task0/while/InfeedQueue/enqueue/0}}]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 537, in <module>
+    est.train(train_input_func, steps=total_steps)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 101, in catch_errors
+    yield
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 478, in _run_infeed
+    session.run(self._enqueue_ops)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Unable to enqueue when not opened, queue: [0000:00:04.0 PE0 C0 MC0 TN0 Queue TENSOR_CORE_INFEED]. State is: CLOSED
+	 [[node input_pipeline_task0/while/InfeedQueue/enqueue/0 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+Caused by op 'input_pipeline_task0/while/InfeedQueue/enqueue/0', defined at:
+  File "lamb_davidnet_cifar10.py", line 537, in <module>
+    est.train(train_input_func, steps=total_steps)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1154, in _train_model_default
+    features, labels, model_fn_lib.ModeKeys.TRAIN, self.config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2547, in _model_fn
+    input_holders.generate_infeed_enqueue_ops_and_dequeue_fn())
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 1167, in generate_infeed_enqueue_ops_and_dequeue_fn
+    self._invoke_input_fn_and_record_structure())
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 1271, in _invoke_input_fn_and_record_structure
+    wrap_fn(device=host_device, op_fn=enqueue_ops_fn))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2945, in _wrap_computation_in_while_loop
+    parallel_iterations=1)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py", line 3556, in while_loop
+    return_same_structure)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py", line 3087, in BuildLoop
+    pred, body, original_loop_vars, loop_vars, shape_invariants)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py", line 3022, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2934, in computation
+    with ops.control_dependencies(op_fn()):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 894, in enqueue_ops_fn
+    tpu_ordinal_function=tpu_ordinal_function_impl)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_feed.py", line 526, in generate_enqueue_ops
+    for (shard, index) in zip(sharded_inputs, xrange(self.number_of_shards))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_feed.py", line 526, in <listcomp>
+    for (shard, index) in zip(sharded_inputs, xrange(self.number_of_shards))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_feed.py", line 458, in _generate_enqueue_op
+    device_ordinal=tpu_ordinal)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/ops/gen_tpu_ops.py", line 1314, in infeed_enqueue_tuple
+    device_ordinal=device_ordinal, name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+FailedPreconditionError (see above for traceback): Unable to enqueue when not opened, queue: [0000:00:04.0 PE0 C0 MC0 TN0 Queue TENSOR_CORE_INFEED]. State is: CLOSED
+	 [[node input_pipeline_task0/while/InfeedQueue/enqueue/0 (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+
+weight_decay 0.01, learning_rate 6.0
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f8983331ae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:05:39.412678: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1070: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7fb3d3aaaae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:05:47.554972: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1070: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+2019-05-02 08:05:55.746626: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+2019-05-02 08:06:04.616336: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:Reraising captured error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Combined status information from 9 operations:
+
+Status code: Invalid argument [9x]
+  node_id '0' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '1' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '2' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '3' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '4' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '5' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '6' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[{{node TPUReplicateMetadata}}]]
+  	 [[{{node TPUReplicateMetadata}}]] [1x]
+(0 successful operations.)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 537, in <module>
+    est.train(train_input_func, steps=total_steps)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model_default
+    saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1407, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 676, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1171, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1270, in run
+    raise six.reraise(*original_exc_info)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1255, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1327, in run
+    run_metadata=run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1091, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Combined status information from 9 operations:
+
+Status code: Invalid argument [9x]
+  node_id '0' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '1' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '2' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '3' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '4' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '5' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '6' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+(0 successful operations.)
+
+Caused by op 'TPUReplicateMetadata', defined at:
+  File "lamb_davidnet_cifar10.py", line 537, in <module>
+    est.train(train_input_func, steps=total_steps)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1154, in _train_model_default
+    features, labels, model_fn_lib.ModeKeys.TRAIN, self.config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2251, in _call_model_fn
+    config)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1112, in _call_model_fn
+    model_fn_results = self._model_fn(features=features, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2558, in _model_fn
+    _train_on_tpu_system(ctx, model_fn_wrapper, dequeue_fn))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2893, in _train_on_tpu_system
+    device_assignment=ctx.device_assignment)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu.py", line 890, in split_compile_and_shard
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu.py", line 636, in split_compile_and_replicate
+    num_replicas=num_replicas, use_tpu=use_tpu, **metadata_kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/ops/gen_tpu_ops.py", line 7366, in tpu_replicate_metadata
+    name=name)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 3300, in create_op
+    op_def=op_def)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/ops.py", line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+InvalidArgumentError (see above for traceback): Combined status information from 9 operations:
+
+Status code: Invalid argument [9x]
+  node_id '0' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '1' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '2' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '3' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '4' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '5' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '6' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+  node_id '7' out of bounds; node_id must be at least 0 and less than 0
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]]
+  	 [[node TPUReplicateMetadata (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1112) ]] [1x]
+(0 successful operations.)
+
+WARNING:tensorflow:Reraising captured error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.UnknownError: Combined status information from 2 operations:
+
+Status code: Unknown [2x]
+  Switched to the FAILED state while waiting for GTC reset to be initiated
+  	 [[{{node configure_distributed_tpu/_0}}]] [1x]
+  Switched to the FAILED state while waiting for GTC reset to be initiated
+  	 [[{{node configure_distributed_tpu/_0}}]]
+  	 [[{{node ConfigureDistributedTPU}}]] [1x]
+(0 successful operations.)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lamb_davidnet_cifar10.py", line 537, in <module>
+    est.train(train_input_func, steps=total_steps)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2457, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/error_handling.py", line 128, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/home/yangyouucb/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 2452, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 358, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1124, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model_default
+    saving_listeners)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1403, in _train_with_estimator_spec
+    log_step_count_steps=log_step_count_steps) as mon_sess:
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 508, in MonitoredTrainingSession
+    stop_grace_period_secs=stop_grace_period_secs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 934, in __init__
+    stop_grace_period_secs=stop_grace_period_secs)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 648, in __init__
+    self._sess = _RecoverableSession(self._coordinated_creator)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1122, in __init__
+    _WrappedSession.__init__(self, self._create_session())
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 1127, in _create_session
+    return self._sess_creator.create_session()
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/training/monitored_session.py", line 812, in create_session
+    hook.after_create_session(self.tf_sess, self.coord)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/contrib/tpu/python/tpu/tpu_estimator.py", line 509, in after_create_session
+    sess.run(tpu.initialize_system(job=self._master_job))
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.UnknownError: Combined status information from 2 operations:
+
+Status code: Unknown [2x]
+  Switched to the FAILED state while waiting for GTC reset to be initiated
+  	 [[{{node configure_distributed_tpu/_0}}]] [1x]
+  Switched to the FAILED state while waiting for GTC reset to be initiated
+  	 [[{{node configure_distributed_tpu/_0}}]]
+  	 [[node ConfigureDistributedTPU (defined at /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/estimator.py:1403) ]] [1x]
+(0 successful operations.)
+weight_decay 0.02, learning_rate 13.0
+weight_decay 0.01, learning_rate 7.0
+CommandException: 1 files/objects could not be removed.
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f692accfae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:06:52.134890: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7ff5d998aae8>) includes params argument, but params are not passed to Estimator.
+2019-05-02 08:06:52.300541: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1070: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1070: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+2019-05-02 08:07:07.603083: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+2019-05-02 08:07:08.579995: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.

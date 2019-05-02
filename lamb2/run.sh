@@ -6,6 +6,6 @@ do
 	do
 		echo "weight_decay $i, learning_rate $j"
 		gsutil -m rm -R -f gs://bert-pretrain-data/cifar/cifar10jobs/*
-		python3 david_net.py --warm_up=5 --learning_rate=$j --weight_decay=$i --tpu_name=infer2
+		python3 lamb_davidnet_cifar10.py --warm_up=5 --learning_rate=$j --weight_decay=$i --tpu_name=infer2
 	done
 done
