@@ -193,6 +193,7 @@ class LAMBOptimizer(tf.train.Optimizer):
 #  tf.gfile.DeleteRecursively('./fenwicks')
 #!git clone https://github.com/fenwickslab/fenwicks.git
 #from fenwicks.utils.colab import TPU_ADDRESS
+tf.logging.info("*********** I'm inputing the parameters ***********")
 BATCH_SIZE = 512 #@param ["512", "256", "128"] {type:"raw"}
 MOMENTUM = 0.9 #@param ["0.9", "0.95", "0.975"] {type:"raw"}
 #WEIGHT_DECAY = 0.000125 #@param ["0.000125", "0.00025", "0.0005"] {type:"raw"}
@@ -224,6 +225,7 @@ WARMUP = FLAGS.warm_up
 WEIGHT_DECAY = FLAGS.weight_decay
 TPU_ADDRESS = FLAGS.tpu_name
 #TPU_ADDRESS = 'infer2'
+tf.logging.info("*********** The TPU I'm using is " + TPU_ADDRESS + " ***********")
 
 
 def exp_decay_lr(init_lr: float, decay_steps: int, base_lr: float = 0, decay_rate: float = 1 / math.e):
@@ -342,7 +344,7 @@ def sgd_optimizer(lr_func, mom: float = 0.9, wd: float = 0.0):
     # beta_1=0.9,
     # beta_2=0.999,
     # epsilon=1e-6,
-    # exclude_from_weight_decay=["LayerNorm", "layer_norm", "batch_normalization", "BatchNormalization", "bias"])
+    # exclude_from_weight_decay=["LayerNorm", "layer_norm", "batch_normalization", "BatchNormalization", "BatchNorm", "bias"])
     def opt_func():
         lr = lr_func()
         # return SGD(lr, mom=mom, wd=wd)
@@ -359,6 +361,7 @@ def sgd_optimizer(lr_func, mom: float = 0.9, wd: float = 0.0):
 
 def weight_decay_loss(wd: float = 0.0005) -> tf.Tensor:
     l2_loss = []
+    wd = 0.0
     for v in tf.trainable_variables():
         if 'BatchNorm' not in v.name and 'weights' in v.name:
             l2_loss.append(tf.nn.l2_loss(v))
@@ -482,6 +485,7 @@ def get_clf_model_func(model_arch, opt_func, reduction=tf.losses.Reduction.MEAN)
     return model_func
 
 
+tf.logging.info("*********** I'm inputing the data ***********")
 data_dir, work_dir = fw.io.get_gcs_dirs(BUCKET, PROJECT)
 
 (X_train, y_train), (X_test, y_test) = tf.keras.datasets.cifar10.load_data()
@@ -533,8 +537,10 @@ opt_func = sgd_optimizer(lr_func, mom=MOMENTUM, wd=WEIGHT_DECAY)
 model_func = get_clf_model_func(build_nn, opt_func, reduction=tf.losses.Reduction.SUM)
 # model_func is a tf.contrib.tpu.TPUEstimatorSpec
 
+tf.logging.info("*********** I'm starting the training ***********")
 est = get_tpu_estimator(steps_per_epoch, model_func, work_dir, trn_bs=BATCH_SIZE, val_bs=n_test)
 est.train(train_input_func, steps=total_steps)
+tf.logging.info("*********** I'm starting the inference ***********")
 
 result = est.evaluate(eval_input_func, steps=1)
 
