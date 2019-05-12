@@ -1,0 +1,92 @@
+warmup 5 learning_rate 0.0001
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f2cae4c5a60>) includes params argument, but params are not passed to Estimator.
+2019-05-12 03:52:25.239496: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-12 03:52:35.883154: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+
+Evaluation results:
+	{'accuracy': 0.21925, 'global_step': 2328, 'loss': 2231.3755}
+
+warmup 5 learning_rate 0.0002
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f534c2a5a60>) includes params argument, but params are not passed to Estimator.
+2019-05-12 03:53:34.183367: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-12 03:53:44.103333: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+
+Evaluation results:
+	{'accuracy': 0.203375, 'global_step': 2328, 'loss': 2170.635}
+
+warmup 5 learning_rate 0.0004
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f44d39b3a60>) includes params argument, but params are not passed to Estimator.
+2019-05-12 03:54:57.079403: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-12 03:55:06.767707: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+
+Evaluation results:
+	{'accuracy': 0.341125, 'loss': 2039.5748, 'global_step': 2328}
+
+warmup 5 learning_rate 0.0006
+CommandException: 1 files/objects could not be removed.
+WARNING:tensorflow:Estimator's model_fn (<function get_clf_model_func.<locals>.model_func at 0x7f241f138a60>) includes params argument, but params are not passed to Estimator.
+2019-05-12 03:56:19.375834: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-05-12 03:56:29.805279: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
