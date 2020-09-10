@@ -203,7 +203,7 @@ WEIGHT_DECAY = 0.064
 LEARNING_RATE = 12.00 #@param ["0.4", "0.2", "0.1"] {type:"raw"}
 EPOCHS = 24 #@param {type:"slider", min:0, max:100, step:1}
 WARMUP = 5 #@param {type:"slider", min:0, max:24, step:1}
-BUCKET = 'gs://bert-pretrain-data'
+BUCKET = 'gs://cifar10-data'
 PROJECT = 'cifar'
 
 tf.flags.DEFINE_float("learning_rate", 10.0, "Learning rate.")

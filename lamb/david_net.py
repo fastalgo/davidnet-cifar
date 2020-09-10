@@ -191,7 +191,7 @@ class LAMBOptimizer(tf.train.Optimizer):
 BATCH_SIZE = 512 #@param {type:"integer"}
 MOMENTUM = 0.9 #@param {type:"number"}
 EPOCHS = 30 #@param {type:"integer"}
-BUCKET = 'gs://bert-pretrain-data/cifar' #@param {type:"string"}
+BUCKET = 'gs://cifar10-data' #@param {type:"string"}
 #TPU_ADDRESS = 'infer1'
 
 tf.flags.DEFINE_float("learning_rate", 0.006, "Learning rate.")
@@ -257,8 +257,10 @@ def get_ds_from_tfrec(data_dir, training, batch_size, num_parallel_calls=12, pre
 
   return dataset
 
-train_input_fn = lambda params: get_ds_from_tfrec(BUCKET + '/cifar-10', training=True, batch_size=params['batch_size'])
-eval_input_fn = lambda params: get_ds_from_tfrec(BUCKET + '/cifar-10', training=False, batch_size=params['batch_size'])
+#train_input_fn = lambda params: get_ds_from_tfrec(BUCKET + '/cifar-10', training=True, batch_size=params['batch_size'])
+#eval_input_fn = lambda params: get_ds_from_tfrec(BUCKET + '/cifar-10', training=False, batch_size=params['batch_size'])
+train_input_fn = lambda params: get_ds_from_tfrec(BUCKET, training=True, batch_size=params['batch_size'])
+eval_input_fn = lambda params: get_ds_from_tfrec(BUCKET, training=False, batch_size=params['batch_size'])
 
 def init_pytorch(shape, dtype=tf.float32, partition_info=None):
   fan = np.prod(shape[:-1])
