@@ -211,13 +211,15 @@ FLAGS = tf.flags.FLAGS
 TPU_ADDRESS = FLAGS.tpu_name
 LEARNING_RATE = FLAGS.learning_rate
 WARMUP = FLAGS.warm_up
-WEIGHT_DECAY = FLAGS.weight_decay
+WEIGHT_DECAY = 0.0
+#WEIGHT_DECAY = FLAGS.weight_decay
 
 
 print('Using TPU:', TPU_ADDRESS)
 print('learning rate:', LEARNING_RATE)
 print('warmup:', WARMUP)
-print('weight decay:', WEIGHT_DECAY)
+print('L2 norm:', WEIGHT_DECAY)
+print('weight decay:', FLAGS.weight_decay)
 
 def get_ds_from_tfrec(data_dir, training, batch_size, num_parallel_calls=12, prefetch=8, dtype=tf.float32):
 
@@ -343,7 +345,7 @@ def model_fn(features, labels, mode, params):
   with tf.control_dependencies(model.get_updates_for(features)):
     #train_op = opt.apply_gradients(zip(grads, model.trainable_variables), global_step=step)
     train_op = create_optimizer(loss, LEARNING_RATE, num_train_steps, num_warmup_steps, True,
-                     1.0, 0, WEIGHT_DECAY)
+                     1.0, 0, FLAGS.weight_decay)
 
   classes = tf.math.argmax(logits, axis=-1)
   metric_fn = lambda classes, labels: {'accuracy': tf.metrics.accuracy(classes, labels)}
