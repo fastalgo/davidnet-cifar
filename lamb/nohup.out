@@ -1,979 +1,0 @@
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556487666124068...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/#1556487673592270...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/model.ckpt-0.index#1556487674408826...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/events.out.tfevents.1556487666.infer2#1556487667026803...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/graph.pbtxt#1556487670887713...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:41:01/model.ckpt-0.data-00000-of-00001#1556487674230228...
-/ [1/6 objects]  16% Done                                                       / [2/6 objects]  33% Done                                                       / [3/6 objects]  50% Done                                                       / [4/6 objects]  66% Done                                                       / [5/6 objects]  83% Done                                                       / [6/6 objects] 100% Done                                                       
-Operation completed over 6 objects.                                              
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-Traceback (most recent call last):
-  File "david_net.py", line 208, in <module>
-    tf.flags.DEFINE_string("tpu_name", infer2, "***")
-NameError: name 'infer2' is not defined
-warmup 5, learning_rate 0.018
-CommandException: 1 files/objects could not be removed.
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f4a7c4ee6a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:51:38.433279: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 21:51:51.485871: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'loss': 366.84714, 'accuracy': 0.927, 'global_step': 2910}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/events.out.tfevents.1556488301.infer2#1556488379172474...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/graph.pbtxt#1556488306034940...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.data-00000-of-00001#1556488309226309...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488301330107...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/checkpoint#1556488378051587...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/#1556488376717150...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/eval/events.out.tfevents.1556488398.infer2#1556488399905901...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/eval/#1556488398547697...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.index#1556488309403661...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-0.meta#1556488310693130...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.data-00000-of-00001#1556488377368021...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.meta#1556488378828952...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:51:37/model.ckpt-2910.index#1556488377577872...
-/ [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f1124b416a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:53:23.772773: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 21:53:36.786166: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'accuracy': 0.9294, 'loss': 340.6521}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488406635308...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/events.out.tfevents.1556488406.infer2#1556488490176876...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/#1556488487719691...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/graph.pbtxt#1556488411240183...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/checkpoint#1556488489121211...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.index#1556488414705932...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/eval/#1556488512298211...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/eval/events.out.tfevents.1556488512.infer2#1556488513539425...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.data-00000-of-00001#1556488414463659...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-0.meta#1556488415997695...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.data-00000-of-00001#1556488488319942...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.index#1556488488531654...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:53:22/model.ckpt-2910.meta#1556488489808973...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f8a555316a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 21:55:17.372365: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 21:55:30.369098: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9299, 'loss': 372.68155, 'global_step': 2910}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556488520250390...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/#1556488603021315...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/events.out.tfevents.1556488520.infer2#1556488605456926...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/checkpoint#1556488604343655...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/eval/#1556488627501012...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.data-00000-of-00001#1556488528033038...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.index#1556488528266015...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/graph.pbtxt#1556488524966626...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-0.meta#1556488529612968...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/eval/events.out.tfevents.1556488627.infer2#1556488628709568...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.data-00000-of-00001#1556488603651008...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.index#1556488603824706...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-21:55:16/model.ckpt-2910.meta#1556488605110335...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f6336d316a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:16:38.403915: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:16:50.729320: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9309, 'global_step': 2910, 'loss': 413.5775}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556489801017350...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/#1556489874641921...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/events.out.tfevents.1556489801.infer2#1556489877199672...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/checkpoint#1556489876043147...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/eval/#1556489895798488...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/eval/events.out.tfevents.1556489895.infer2#1556489897171641...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.index#1556489808812834...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/graph.pbtxt#1556489805195121...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.data-00000-of-00001#1556489808595769...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-0.meta#1556489810058746...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.data-00000-of-00001#1556489875247165...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.index#1556489875498711...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:16:37/model.ckpt-2910.meta#1556489876830363...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fac8f0ac6a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:18:21.185098: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:18:33.670461: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'accuracy': 0.9283, 'loss': 461.05905}
-
-warmup 5, learning_rate 0.018
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/#1556489903782669...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/graph.pbtxt#1556489907895582...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/checkpoint#1556489985836273...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/#1556489984515376...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/events.out.tfevents.1556489904.infer2#1556489986859144...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/eval/events.out.tfevents.1556490009.infer2#1556490010339265...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/eval/#1556490009118421...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.data-00000-of-00001#1556489911400007...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.index#1556489911618530...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-0.meta#1556489912967366...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.data-00000-of-00001#1556489985143557...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.index#1556489985330517...
-Removing gs://bert-pretrain-data/cifar/cifar10jobs/job-2019-04-28-22:18:20/model.ckpt-2910.meta#1556489986524294...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f312a0756a8>) includes params argument, but params are not passed to Estimator.
-2019-04-28 22:20:14.306164: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.cast instead.
-2019-04-28 22:20:26.599723: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:354] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use standard file APIs to check for files with this prefix.
-Using TPU: infer2
-learning rate: 0.018
-warmup: 5
-weight decay: 0.01
-
-WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-If you depend on functionality not listed there, please file an issue.
-
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9289, 'loss': 428.51166, 'global_step': 2910}
-
-warmup 6, learning_rate 0.05
-Removing gs://cifar10-data/cifar10jobs/#1599740615686511...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-0.data-00000-of-00001#1599740628652662...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-0.meta#1599740633306069...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-0.index#1599740629506376...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-2910.data-00000-of-00001#1599740722741361...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/checkpoint#1599740725816674...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/#1599740616333312...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-2910.index#1599740723849150...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/events.out.tfevents.1599740616.trump#1599740728675043...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/graph.pbtxt#1599740622010216...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:23:31/model.ckpt-2910.meta#1599740727810300...
-/ [1/11 objects]   9% Done                                                      / [2/11 objects]  18% Done                                                      / [3/11 objects]  27% Done                                                      / [4/11 objects]  36% Done                                                      / [5/11 objects]  45% Done                                                      / [6/11 objects]  54% Done                                                      / [7/11 objects]  63% Done                                                      / [8/11 objects]  72% Done                                                      / [9/11 objects]  81% Done                                                      / [10/11 objects]  90% Done                                                     / [11/11 objects] 100% Done                                                     
-Operation completed over 11 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fef517f9b70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:27:46.570066: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:27:46.945593: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:27:46.945634: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:27:46.945658: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:28:10.083710: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.05
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'loss': 330.96378, 'accuracy': 0.9204}
-
-warmup 6, learning_rate 0.04
-Removing gs://cifar10-data/cifar10jobs/#1599740870484611...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/events.out.tfevents.1599740871.trump#1599740969168459...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/graph.pbtxt#1599740876878483...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/#1599740871305490...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-0.data-00000-of-00001#1599740884486025...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-0.index#1599740885323948...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/checkpoint#1599740966370619...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-0.meta#1599740889164448...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/eval/#1599741037082040...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/eval/events.out.tfevents.1599741037.trump#1599741040227348...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-2910.data-00000-of-00001#1599740963630207...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-2910.index#1599740964412231...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:27:45/model.ckpt-2910.meta#1599740968247165...
-/ [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f2ff7cc6b70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:30:45.206923: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:30:45.583851: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:30:45.583892: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:30:45.583918: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:31:08.944040: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.04
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9265, 'global_step': 2910, 'loss': 326.4082}
-
-warmup 6, learning_rate 0.03
-Removing gs://cifar10-data/cifar10jobs/#1599741049354863...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/#1599741050061470...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/eval/#1599741230675205...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/events.out.tfevents.1599741050.trump#1599741165168948...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/checkpoint#1599741162199996...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/graph.pbtxt#1599741056814633...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-0.data-00000-of-00001#1599741063218604...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-0.meta#1599741067982845...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/eval/events.out.tfevents.1599741230.trump#1599741233714007...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-0.index#1599741064145497...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-2910.data-00000-of-00001#1599741159077826...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-2910.index#1599741160280047...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:30:44/model.ckpt-2910.meta#1599741164197922...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7fd770f9cb70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:33:58.608560: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:33:58.967625: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:33:58.967664: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:33:58.967688: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:34:22.582906: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.03
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'accuracy': 0.9272, 'loss': 299.8872}
-
-warmup 6, learning_rate 0.025
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/events.out.tfevents.1599741243.trump#1599741356659611...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/#1599741243389429...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/eval/#1599741424301188...
-Removing gs://cifar10-data/cifar10jobs/#1599741242616775...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/checkpoint#1599741353701336...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/graph.pbtxt#1599741249147229...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-0.data-00000-of-00001#1599741256800495...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/eval/events.out.tfevents.1599741424.trump#1599741427774033...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-0.index#1599741257702601...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-0.meta#1599741261657175...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-2910.data-00000-of-00001#1599741350924176...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-2910.index#1599741351752795...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:33:58/model.ckpt-2910.meta#1599741355710521...
-/ [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f51a9d73b70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:37:12.655815: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:37:13.011179: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:37:13.011217: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:37:13.011240: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:37:34.977373: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.025
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'loss': 322.5174, 'accuracy': 0.9303, 'global_step': 2910}
-
-warmup 6, learning_rate 0.02
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/events.out.tfevents.1599741437.trump#1599741551438500...
-Removing gs://cifar10-data/cifar10jobs/#1599741436490470...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/#1599741437205789...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/checkpoint#1599741548589502...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/eval/#1599741616977575...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/graph.pbtxt#1599741442917541...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-0.data-00000-of-00001#1599741449380295...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/eval/events.out.tfevents.1599741617.trump#1599741620071801...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-0.index#1599741450168420...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-0.meta#1599741454004716...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-2910.data-00000-of-00001#1599741545900787...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-2910.index#1599741546741035...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:37:12/model.ckpt-2910.meta#1599741550554544...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f5a9617cb70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:40:24.829920: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:40:25.176334: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:40:25.176373: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:40:25.176396: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:40:47.399032: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.02
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9333, 'loss': 306.22992, 'global_step': 2910}
-
-warmup 6, learning_rate 0.015
-Removing gs://cifar10-data/cifar10jobs/#1599741628763868...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/events.out.tfevents.1599741629.trump#1599741743881731...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/eval/#1599741809188205...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-0.data-00000-of-00001#1599741641771965...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/graph.pbtxt#1599741635117953...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/#1599741629472303...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-0.index#1599741642610740...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/checkpoint#1599741741013570...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-0.meta#1599741646461907...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/eval/events.out.tfevents.1599741809.trump#1599741813293328...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-2910.data-00000-of-00001#1599741738308200...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-2910.index#1599741739142264...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:40:24/model.ckpt-2910.meta#1599741742925157...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f67c3901b70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:43:38.203853: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:43:38.561181: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:43:38.561220: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:43:38.561243: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:44:00.534102: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.015
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'loss': 360.0594, 'global_step': 2910, 'accuracy': 0.9329}
-
-warmup 6, learning_rate 0.015
-Removing gs://cifar10-data/cifar10jobs/#1599741822154985...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/#1599741822853798...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/checkpoint#1599741933126107...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/eval/#1599742001737383...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/eval/events.out.tfevents.1599742001.trump#1599742004849033...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-0.data-00000-of-00001#1599741834905069...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/events.out.tfevents.1599741823.trump#1599741935994731...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-0.index#1599741835773580...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/graph.pbtxt#1599741828460438...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-0.meta#1599741839597967...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-2910.data-00000-of-00001#1599741930327456...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-2910.meta#1599741935114539...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:43:37/model.ckpt-2910.index#1599741931141072...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f4aee239b70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:46:49.718838: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:46:50.080726: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:46:50.080789: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:46:50.080816: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:47:12.544972: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.015
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'accuracy': 0.9318, 'loss': 299.40024, 'global_step': 2910}
-
-warmup 6, learning_rate 0.01
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/events.out.tfevents.1599742014.trump#1599742128362493...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/graph.pbtxt#1599742020261986...
-Removing gs://cifar10-data/cifar10jobs/#1599742013772453...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/#1599742014458657...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/checkpoint#1599742125407632...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-0.index#1599742027739378...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/eval/events.out.tfevents.1599742194.trump#1599742197833793...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-0.data-00000-of-00001#1599742026865261...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/eval/#1599742194606243...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-0.meta#1599742031618006...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-2910.data-00000-of-00001#1599742122661949...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-2910.index#1599742123487886...
-Removing gs://cifar10-data/cifar10jobs/job-2020-09-10-12:46:49/model.ckpt-2910.meta#1599742127380105...
-/ [1/13 objects]   7% Done                                                      / [2/13 objects]  15% Done                                                      / [3/13 objects]  23% Done                                                      / [4/13 objects]  30% Done                                                      / [5/13 objects]  38% Done                                                      / [6/13 objects]  46% Done                                                      / [7/13 objects]  53% Done                                                      / [8/13 objects]  61% Done                                                      / [9/13 objects]  69% Done                                                      / [10/13 objects]  76% Done                                                     / [11/13 objects]  84% Done                                                     / [12/13 objects]  92% Done                                                     / [13/13 objects] 100% Done                                                     
-Operation completed over 13 objects.                                             
-WARNING:tensorflow:From david_net.py:88: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:
-The TensorFlow contrib module will not be included in TensorFlow 2.0.
-For more information, please see:
-  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
-  * https://github.com/tensorflow/addons
-  * https://github.com/tensorflow/io (for I/O related ops)
-If you depend on functionality not listed there, please file an issue.
-
-WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f5198ffeb70>) includes params argument, but params are not passed to Estimator.
-2020-09-10 12:50:02.730001: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.parse_single_example is deprecated. Please use tf.io.parse_single_example instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
-
-2020-09-10 12:50:03.091385: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
-2020-09-10 12:50:03.091434: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
-2020-09-10 12:50:03.091458: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (trump): /proc/driver/nvidia/version does not exist
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-WARNING:tensorflow:From david_net.py:340: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
-
-WARNING:tensorflow:From david_net.py:22: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
-
-WARNING:tensorflow:From david_net.py:27: The name tf.train.polynomial_decay is deprecated. Please use tf.compat.v1.train.polynomial_decay instead.
-
-WARNING:tensorflow:From david_net.py:41: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
-
-WARNING:tensorflow:From david_net.py:71: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/clip_ops.py:301: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-WARNING:tensorflow:From david_net.py:123: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
-Instructions for updating:
-Prefer Variable.assign which has equivalent behavior in 2.X.
-2020-09-10 12:50:25.746804: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:3322: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Deprecated in favor of operator or tf.math.divide.
-WARNING:tensorflow:From david_net.py:349: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
-
-WARNING:tensorflow:TPUPollingThread found TPU b'trump' in state READY, and health HEALTHY.
-Using TPU: trump
-learning rate: 0.01
-warmup: 6
-weight decay: 1.0
-*********** I have started the training ***********
-*********** I have finished the training ***********
-
-Evaluation results:
-	{'global_step': 2910, 'loss': 360.65427, 'accuracy': 0.9292}
-
